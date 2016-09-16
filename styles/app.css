@@ -20,7 +20,7 @@ body {
 article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
   display: block; }
 
-audio, canvas, progress, video {
+audio, progress, video {
   display: inline-block; }
 
 audio:not([controls]) {
@@ -138,5 +138,16 @@ textarea {
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   font: inherit; }
+
+body {
+  background-color: silver; }
+
+canvas {
+  width: 90vw;
+  height: 90vh;
+  background-color: #fff;
+  border: 1px solid black;
+  margin: auto;
+  display: block; }
 
 /*# sourceMappingURL=app.css.map */
