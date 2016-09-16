@@ -23,6 +23,7 @@
 *  context.rect(180, 0, 200, 100); is the format for a rect element http://www.html5canvastutorials.com/tutorials/html5-canvas-rectangles/ - that is (rightoffset, topoffset, width, height)
 * http://www.sparknotes.com/math/algebra1/graphingequations/section4.rhtml - checking my math around slope
 * http://jsfiddle.net/HBZBQ/ a fiddle that tracks mouse position, not sure if this works in all browsers.
+* docs on event.which https://api.jquery.com/event.which/ because it's kinda dangerous to just copy stuff from fiddles and then assume it's going to work.
 
 ### notes/pseudocode
 
