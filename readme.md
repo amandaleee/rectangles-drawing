@@ -27,6 +27,7 @@
 * http://jsfiddle.net/HBZBQ/ a fiddle that tracks mouse position, not sure if this works in all browsers.
 * docs on event.which https://api.jquery.com/event.which/ because it's kinda dangerous to just copy stuff from fiddles (as above) and then assume it's going to work.
 * http://stackoverflow.com/questions/14651306/get-mouse-position-within-div offset relative to canvas, not to full document 
+* canvas drawing app tutorial - http://www.williammalone.com/articles/create-html5-canvas-javascript-drawing-app/ - i probably have to redraw() at some point, idk
 
 ### notes/pseudocode
 * we could refactor this using the slope to maybe get rid of some of the if/else 
