@@ -1,17 +1,14 @@
 ### Assumptions/limitations
 * This is only for contemporary browsers [this is a complicated app that involves a lot of things I've never used before and I don't have the resources to do extensive testing on legacy versions before the due date]
-* 
-
-
 
 ### Todo
 
-* make the canvas element vertically centered
+* make the canvas element vertically centered - flexbox to the rescue
 * pageX and pageY values are the distance from the top of the window, not the top of the element. write the function to subtract margins/padding from the values. This might be useful: http://stackoverflow.com/questions/14651306/get-mouse-position-within-div
 * mobile/tablet views
 * actual styling
-* canvas fallback styling []
-* QA/mobile testing
+* canvas fallback styling ["your browser is not supported"]
+* QA/mobile testing if there's time
 * user model/login
 * save drawing/urls/share drawing
 * delete drawing
@@ -24,16 +21,14 @@
 
 ### Resources I used
 
-* https://dev.opera.com/articles/html5-canvas-painting/ Canvas tutorial
+* https://dev.opera.com/articles/html5-canvas-painting/ Canvas tutorial [this isn't as helpful as i hoped]
 *  context.rect(180, 0, 200, 100); is the format for a rect element http://www.html5canvastutorials.com/tutorials/html5-canvas-rectangles/ - that is (rightoffset, topoffset, width, height)
-* http://www.sparknotes.com/math/algebra1/graphingequations/section4.rhtml - checking my math around slope
+* http://www.sparknotes.com/math/algebra1/graphingequations/section4.rhtml - checking my math around slope, probably not using this anymore but i might come back to it for a refactor
 * http://jsfiddle.net/HBZBQ/ a fiddle that tracks mouse position, not sure if this works in all browsers.
-* docs on event.which https://api.jquery.com/event.which/ because it's kinda dangerous to just copy stuff from fiddles and then assume it's going to work.
-* http://stackoverflow.com/questions/14651306/get-mouse-position-within-div offset relative to canvas, not to full document.
+* docs on event.which https://api.jquery.com/event.which/ because it's kinda dangerous to just copy stuff from fiddles (as above) and then assume it's going to work.
+* http://stackoverflow.com/questions/14651306/get-mouse-position-within-div offset relative to canvas, not to full document 
 
 ### notes/pseudocode
-
-if page is in drawing mode
 
   <!-- on mousedown, record the XY value of the mouse  -->
   var mousedownX;
@@ -65,7 +60,7 @@ if page is in drawing mode
 
 // we need a case for if people just click. that's not going to create a rectangle, executive decision here. 
 //i need to flip these based on how canvas actually works
-//write test cases lol
+//write test cases lol - maybe i should use something like lodash/underscore to generate random numbers here
 
   if slope > 0 
   if slope < 0
