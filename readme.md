@@ -1,18 +1,23 @@
-### Assumptions
+### Assumptions/limitations
+* This is only for contemporary browsers [this is a complicated app that involves a lot of things I've never used before and I don't have the resources to do extensive testing on legacy versions before the due date]
+* 
+
 
 
 ### Todo
 
 * make the canvas element vertically centered
+* pageX and pageY values are the distance from the top of the window, not the top of the element. write the function to subtract margins/padding from the values. This might be useful: http://stackoverflow.com/questions/14651306/get-mouse-position-within-div
 * mobile/tablet views
 * actual styling
-* canvas fallback styling
+* canvas fallback styling []
 * QA/mobile testing
 * user model/login
 * save drawing/urls/share drawing
 * delete drawing
 * see all my drawings
 * change the color of the box, the size, the rotation [?]
+
 
 ### Done
 
@@ -24,6 +29,7 @@
 * http://www.sparknotes.com/math/algebra1/graphingequations/section4.rhtml - checking my math around slope
 * http://jsfiddle.net/HBZBQ/ a fiddle that tracks mouse position, not sure if this works in all browsers.
 * docs on event.which https://api.jquery.com/event.which/ because it's kinda dangerous to just copy stuff from fiddles and then assume it's going to work.
+* http://stackoverflow.com/questions/14651306/get-mouse-position-within-div offset relative to canvas, not to full document.
 
 ### notes/pseudocode
 
