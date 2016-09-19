@@ -34,6 +34,38 @@
   ..* find the slope of this line = rise over run. (change in the y value)/(change in the x value)
   ..* var slope =  (mouseupY - mousedownY) / (mouseupX - mousedownX);
 
+* set innerhmtl of the one you're viewing to the one you saved. for each saved one. 
+
+add fb/google oath last. 
+save these innerhtml in cookies if they're allowed to be that big; otehrwise, use localstorage. 
+name the saved layout - return to the saved layout. 
+this is going to be in a cookie - if it can manage that html, cool, then there are 
+key/value pair - key is name, value is the innerhtml
+
+sessionStorage.setItem("key", "value");
+
+var layouts = JSON.parse(localStorage.getItem('layouts'));
+localStorage.setItem("layouts",JSON.stringify([]));
+//the 
+localStorage.get
+
+store array, pull array. 
+
+layouts.push({'My cool layout': document.querySelector('theelement').innerHTML});
+// put the new layout into the array as an object w key value pair. 
+localStorage.setItem("layouts", JSOT.stringify(layouts));
+var layouts = var layouts = JSON.parse(localStorage.getItem('layouts'));
+
+click on a name, search for the name in the localstorage array, load it.
+
+document.querySelector("#canvas").innerHTML = layouts[0]; //
+
+socket.io/node - broadcast/emit
+emit - type of message, 
+
+
+
+
 
 
 
