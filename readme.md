@@ -7,12 +7,8 @@
 
 ­* Log in with Google
 ­* Log in with Facebook
-* Add a new rectangle to the area (.add-rect)
-* Remove a rectangle (.remove-rect)
-* Resize a rectangle using direct mouse manipulations (.resize)
-* Move a rectangle using direct mouse manipulations (.move)
+* Remove a rectangle (.remove) - in progress
 * Change the color of a rectangle (.recolor)
-* Clear the area (.clear-all)
 * Save the current area layout (the position, size, and color of each rectangle in the area)
 * Name a saved layout
 * Return to a saved layout
@@ -20,17 +16,19 @@
 * The layouts should be stored per­-user & should persist though a page refresh.
 
 # Featureset DONE: 
-* 
+* Add a new rectangle to the area (.add-rect click event)
+* Resize a rectangle using direct mouse manipulations - .resizable() method
+* Move a rectangle using direct mouse manipulations - draggable() method
+* Clear the area (.clear click event)
 
 ### misc todo
-
+* terate on $(".rectangle").draggable().resizable(); and make it target ONLY the rect that was just added, not all of them - this is going to be a memory suck if not
 * mobile/tablet views
 * actual styling
-* canvas fallback styling ["your browser is not supported"]
 * QA/mobile testing if there's time
 * user model/login
 * save drawing/urls/share drawing
-* delete drawing
+
 * see all my drawings
 * change the color of the box, the size, the rotation [?]
 

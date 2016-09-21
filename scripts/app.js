@@ -2,13 +2,19 @@ $(document).ready(function(){
 
   // a reusable rectangle class to append
   // var count = 1 - for iterating
-  var rect = "<div class=\"rectangle\"></div>";
+  var rect = "<div class=\"rectangle\">"
+    + "<div class=\"remove\">X</div>"
+    + "</div>"
+    
   
 
   $(".add-rect").click(function(){
-    // append it
-    $(".canvas").append(rect);
-    //make it draggable - iterate on this and make it target ONLY the rect that i just added, not all of them. 
-    $(".rectangle").draggable();
+    $(".canvas").append(rect); //append it
+    $(".rectangle").draggable().resizable();//make it draggable and resizeable
   });
+
+  $(".clear").click(function(){
+    $(".rectangle").remove(); //removes all
+  });
+
 });
