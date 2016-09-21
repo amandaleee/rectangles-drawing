@@ -1,10 +1,29 @@
 ### Assumptions/limitations
 * This is only for contemporary browsers [this is a complicated app that involves a lot of things I've never used before and I don't have the resources to do extensive testing on legacy versions before the due date]
 
-### Todo
 
-* make the canvas element vertically centered - flexbox to the rescue
-* pageX and pageY values are the distance from the top of the window, not the top of the element. write the function to subtract margins/padding from the values. This might be useful: http://stackoverflow.com/questions/14651306/get-mouse-position-within-div
+
+# Featureset TODO: 
+
+­* Log in with Google
+­* Log in with Facebook
+* Add a new rectangle to the area
+* Remove a rectangle
+* Resize a rectangle using direct mouse manipulations
+* Move a rectangle using direct mouse manipulations
+* Change the color of a rectangle
+* Clear the area
+* Save the current area layout (the position, size, and color of each rectangle in the area)
+* Name a saved layout
+* Return to a saved layout
+* Delete a saved layout from the set of saved layouts
+* The layouts should be stored per­-user & should persist though a page refresh.
+
+# Featureset DONE: 
+* 
+
+### misc todo
+
 * mobile/tablet views
 * actual styling
 * canvas fallback styling ["your browser is not supported"]
@@ -20,6 +39,13 @@
 
 
 ### Resources I used
+
+
+
+
+
+
+### Resources I looked at but didn't use
 
 * https://dev.opera.com/articles/html5-canvas-painting/ Canvas tutorial [this isn't as helpful as i hoped]
 *  context.rect(180, 0, 200, 100); is the format for a rect element http://www.html5canvastutorials.com/tutorials/html5-canvas-rectangles/ - that is 
