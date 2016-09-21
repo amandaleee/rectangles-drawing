@@ -7,12 +7,12 @@
 
 ­* Log in with Google
 ­* Log in with Facebook
-* Add a new rectangle to the area
-* Remove a rectangle
-* Resize a rectangle using direct mouse manipulations
-* Move a rectangle using direct mouse manipulations
-* Change the color of a rectangle
-* Clear the area
+* Add a new rectangle to the area (.add-rect)
+* Remove a rectangle (.remove-rect)
+* Resize a rectangle using direct mouse manipulations (.resize)
+* Move a rectangle using direct mouse manipulations (.move)
+* Change the color of a rectangle (.recolor)
+* Clear the area (.clear-all)
 * Save the current area layout (the position, size, and color of each rectangle in the area)
 * Name a saved layout
 * Return to a saved layout

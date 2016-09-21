@@ -1,11 +1,21 @@
 body {
-  background-color: silver;
+  background-color: #aaa;
 }
-canvas {
-  width: 450px;
-  height: 450px;
-  background-color: #fff; 
-  border: 1px solid black;
+.drawing-area {
+  width: 90%; 
   margin: auto; 
-  display: block;
+  background-color: #fff;
+  height: 90vh;
+  margin-top: 5vh;
+  padding: 1rem;
+  box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; 
+}
+.rectangle {
+  background-color: blue; 
+  width: 50px;
+  height: 50px;
+  position: relative;
+  
 }
