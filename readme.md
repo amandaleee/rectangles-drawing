@@ -37,8 +37,7 @@
 
 
 ### Resources I used
-
-
+* https://forum.jquery.com/topic/can-the-same-element-have-draggable-and-click-event - draggable and click events don't seem to work together, i was checking to see if this had ever happened to anyone else.
 
 
 
