@@ -5,13 +5,12 @@
 # Featureset TODO: 
 ­* Log in with Google
 ­* Log in with Facebook
-
-* Name a saved layout
 * Return to a saved layout
 * Delete a saved layout from the set of saved layouts
 * The layouts should be stored per­-user & should persist though a page refresh.
 
 # Featureset DONE: 
+* Name a saved layout //this is actually "name a layout before you save it"; you'll be able to load a layout and then save it under a different name after i get "return to a layout" working. 
 * Add a new rectangle to the area (.add-rect click event)
 * Resize a rectangle using direct mouse manipulations - .resizable() method
 * Move a rectangle using direct mouse manipulations - draggable() method
