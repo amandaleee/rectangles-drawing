@@ -7,7 +7,9 @@ $(document).ready(function(){
     + "<input type=\"text\" class=\"colorpicker\"/>"
     + "</div>";
     
-  
+  $(".colorpicker").spectrum({
+    showInput: true //otherwise the input won't show until it's clicked. 
+  });
 
   $(".add-rect").click(function(){
     $(".canvas").append(rect); //append it
@@ -27,12 +29,21 @@ $(document).ready(function(){
     });
   });
 
-
   $(".clear").click(function(){
     $(".rectangle").remove(); //removes all
   });
 
- 
+  var drawings = []; //set the drawings array
+  localStorage.setItem('drawings', JSON.stringify([])); 
+  
+  $(".save").click(function(){
+    var drawingval = $(".canvas").html();
+    drawings.push({'name': drawingval});//replace these with innerhtml name is forthcoming
+    console.log(drawings); //this is working
+
+
+  });
+  
  
 
 

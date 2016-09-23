@@ -2,13 +2,10 @@
 * This is only for contemporary browsers [this is a complicated app that involves a lot of things I've never used before and I don't have the resources to do extensive testing on legacy versions before the due date]
 
 
-
 # Featureset TODO: 
-
 ­* Log in with Google
 ­* Log in with Facebook
-* Change the color of a rectangle (.recolor)
-* Save the current area layout (the position, size, and color of each rectangle in the area)
+
 * Name a saved layout
 * Return to a saved layout
 * Delete a saved layout from the set of saved layouts
@@ -19,13 +16,16 @@
 * Resize a rectangle using direct mouse manipulations - .resizable() method
 * Move a rectangle using direct mouse manipulations - draggable() method
 * Clear the area (.clear click event)
-* Remove a rectangle (.remove) - in progress
+* Remove a rectangle (.remove click event)
+* Change the color of a rectangle (the whole spectrum.js package()
+* Save the current area layout (the position, size, and color of each rectangle in the area)
 
-### misc todo
+### misc todo/known bugs
 * iterate on $(".rectangle").draggable().resizable(); and make it target ONLY the rect that was just added, not all of them - this could be a memory suck if not
-# some weird behavior - sometimes the rectangles move other rectangles out of the way. 
-* mobile/tablet views
-* actual styling
+* some weird behavior - sometimes the rectangles move other rectangles out of the way; also if you delete some, the others will move around. 
+* 
+* iterate on the spectrum input - it's weird until you click on it. 
+* actual styling, including responsiveness. 
 * QA/mobile testing if there's time
 
 
@@ -34,6 +34,9 @@
 
 ### Resources I used
 * https://forum.jquery.com/topic/can-the-same-element-have-draggable-and-click-event - draggable and click events don't seem to work together, i was checking to see if this had ever happened to anyone else.
+* http://jsfiddle.net/bgrins/ctkY3/ - a fiddle showing me how to use the colorpicker.
+* http://www.lugolabs.com/articles/71-how-to-use-a-color-picker-in-javascript more colorpicker resources
+* https://bgrins.github.io/spectrum/#events-change actual Spectrum documentation.
 
 
 
