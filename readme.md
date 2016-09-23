@@ -7,7 +7,6 @@
 
 ­* Log in with Google
 ­* Log in with Facebook
-* Remove a rectangle (.remove) - in progress
 * Change the color of a rectangle (.recolor)
 * Save the current area layout (the position, size, and color of each rectangle in the area)
 * Name a saved layout
@@ -20,17 +19,14 @@
 * Resize a rectangle using direct mouse manipulations - .resizable() method
 * Move a rectangle using direct mouse manipulations - draggable() method
 * Clear the area (.clear click event)
+* Remove a rectangle (.remove) - in progress
 
 ### misc todo
-* terate on $(".rectangle").draggable().resizable(); and make it target ONLY the rect that was just added, not all of them - this is going to be a memory suck if not
+* iterate on $(".rectangle").draggable().resizable(); and make it target ONLY the rect that was just added, not all of them - this could be a memory suck if not
+# some weird behavior - sometimes the rectangles move other rectangles out of the way. 
 * mobile/tablet views
 * actual styling
 * QA/mobile testing if there's time
-* user model/login
-* save drawing/urls/share drawing
-
-* see all my drawings
-* change the color of the box, the size, the rotation [?]
 
 
 ### Done
@@ -42,7 +38,7 @@
 
 
 
-### Resources I looked at but didn't use
+### Resources I looked at but didn't use [when i was going the Canvas direction]
 
 * https://dev.opera.com/articles/html5-canvas-painting/ Canvas tutorial [this isn't as helpful as i hoped]
 *  context.rect(180, 0, 200, 100); is the format for a rect element http://www.html5canvastutorials.com/tutorials/html5-canvas-rectangles/ - that is 
