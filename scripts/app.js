@@ -34,11 +34,15 @@ $(document).ready(function(){
   });
 
   var drawings = []; //set the drawings array
+  var drawingcount = 0;
   localStorage.setItem('drawings', JSON.stringify([])); 
-  
+
   $(".save").click(function(){
+    drawingcount++;
     var drawingval = $(".canvas").html();
-    drawings.push({'name': drawingval});//replace these with innerhtml name is forthcoming
+    console.log($(".drawing-name").val());
+    var drawingname = ($(".drawing-name").val());
+    drawings.push({name: drawingname, markup: drawingval, number: drawingcount });//
     console.log(drawings); //this is working
 
 

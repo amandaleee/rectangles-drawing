@@ -23,7 +23,7 @@
 ### misc todo/known bugs
 * iterate on $(".rectangle").draggable().resizable(); and make it target ONLY the rect that was just added, not all of them - this could be a memory suck if not
 * some weird behavior - sometimes the rectangles move other rectangles out of the way; also if you delete some, the others will move around. 
-* 
+* if the user clicks "save" more than once, it'll save duplicates of the layouts. 
 * iterate on the spectrum input - it's weird until you click on it. 
 * actual styling, including responsiveness. 
 * QA/mobile testing if there's time
@@ -50,11 +50,6 @@
 * docs on event.which https://api.jquery.com/event.which/ because it's kinda dangerous to just copy stuff from fiddles (as above) and then assume it's going to work.
 * http://stackoverflow.com/questions/14651306/get-mouse-position-within-div offset relative to canvas, not to full document 
 * canvas drawing app tutorial - http://www.williammalone.com/articles/create-html5-canvas-javascript-drawing-app/ - i probably have to redraw() at some point, idk
-
-### notes/pseudocode
-* we could refactor this using the slope to maybe get rid of some of the if/else 
-  ..* find the slope of this line = rise over run. (change in the y value)/(change in the x value)
-  ..* var slope =  (mouseupY - mousedownY) / (mouseupX - mousedownX);
 
 
 
