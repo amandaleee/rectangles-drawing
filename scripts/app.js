@@ -21,6 +21,31 @@ $(document).ready(function(){
     $(".rectangle").remove(); //removes all
   });
 
-  
+ 
+ $("#full").spectrum({
+    color: "#ECC",
+    showInput: true,
+    preferredFormat: "hex",
+    move: function (color) {
+        
+    },
+    show: function () {
+    
+    },
+    beforeShow: function () {
+    
+    },
+    hide: function () {
+    
+    },
+    change: function(color) {
+        console.log(color);
+        $(".rectangle").css('background', color);
+    }
+});
+
+
+
+
 });
 
