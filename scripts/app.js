@@ -1,71 +1,65 @@
 $(document).ready(function(){
 
-  // a reusable rectangle class to append
-  // var count = 1 - for iterating
 
-
-   
   if(localStorage && localStorage.getItem("drawings")){
-    console.log(JSON.parse(localStorage.getItem("drawings")));
+    // console.log(JSON.parse(localStorage.getItem("drawings")));
     // add drawings to list.
   } else {
-    alert("drawings do not exist");
+    // alert("drawings do not exist");
     // localStorage.setItem("drawings", JSON.stringify([])); 
   };
 
+  //reusable variable for the rectangle
   var rect = "<div class=\"rectangle\">"
     + "<div class=\"remove\">X</div>"
     + "<input type=\"text\" class=\"colorpicker\"/>"
     + "</div>";
-    
-  $(".colorpicker").spectrum({
-    showInput: true //otherwise the input won't show until it's clicked. 
-  });
 
+  // this makes the colorpicker display correctly when the rectangle loads, 
+  // instead of just looking like an input box
+  $(".colorpicker").spectrum();
+
+  //adding a rectangle
   $(".add-rect").click(function(){
-    $(".canvas").append(rect); //append it
-    $(".rectangle").draggable().resizable();//make it draggable and resizeable
-    $(".rectangle").on("click", ".remove", function () {//remove just the one
+    $(".canvas").append(rect); //appends it
+    $(".rectangle").draggable().resizable();//makes it draggable and resizeable
+    $(".rectangle").on("click", ".remove", function () {//removes just the one
       $(this).parent(".rectangle").remove(); 
     });
-    $(".rectangle").on("click", ".colorpicker", function () {//change the color
-      $(".colorpicker").spectrum({
-        color: "#ECC",
-        showInput: true,
-        preferredFormat: "hex",
-        change: function(color) {
+    $(".colorpicker").spectrum({ //makes the colorpicker function or real
+        color: "#ECC",//initial color
+        preferredFormat: "hex", //hex, not rgb/hsb/string
+        change: function(color) { //set new background color when user changes the picker values
           $(this).parent(".rectangle").css("background", color);
         }
-      });
     });
   });
-
   $(".clear").click(function(){
-    $(".rectangle").remove(); //removes all
+    $(".rectangle").remove(); //removes all rectangles
   });
 
   var drawings = []; //set the drawings array
-  var drawingcount = 0; //set the drawings count - i'm not sure if i'm going to use this
-  
 
   $(".save").click(function(){
-    drawingcount++;
-    var drawingname = ($(".drawing-name").val());//save the name
+    var drawingname = ($(".drawing-name").val());//save the name, without spaces
+    var drawingnameClass = drawingname.replace(/\s+/g, ''); //squashes the spaces to use as a class name below - not sure this is the right direction to go. 
     var drawingval = $(".canvas").html(); //save the drawing
-    drawings.push({name: drawingname, markup: drawingval, number: drawingcount });
-    var drawingnameAppend = "<li class=\"" 
-    + drawingname 
-    + "\">" + drawingname + "</li>";
-    $(".drawing-list").append(drawingnameAppend); //add this to the list
+    drawings.push({name: drawingname, markup: drawingval, class: drawingnameClass });
+    var drawingnameAppend = "<p class=\"" 
+    + drawingnameClass //add the class
+    + " saved-drawing\">" + drawingname + "<span class=\"remove-drawing\">(remove)</span>"
+    + "</p>"; //add the name
+    $(".drawing-list").append(drawingnameAppend); //add this to the div
+    $(".saved-drawing").click(function(){
+      var classlist = $(this).attr("class").split(' ');
+      //find the class  on this element that's not .saved-drawing;
+      //find that value as from the array of drawings;
+      //render that  as innerhtml in the .canvas
+    }); 
+    $(".remove-drawing").click(function(){
+      $(this).parent(".saved-drawing").remove(); //remove the drawing
+    });
   });
-
-  
-
-  
-
-
-
-
+ 
 
 });
-

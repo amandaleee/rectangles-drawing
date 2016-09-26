@@ -1,13 +1,12 @@
 ### Assumptions/limitations
-* This is only for contemporary browsers [this is a complicated app that involves a lot of things I've never used before and I don't have the resources to do extensive testing on legacy versions before the due date]
+* I tested this on Chrome, Firefox and Safari - normally I'd test on IE as well but I don't have a Windows machine or a testing utility [eg Browserstack] right now. 
 
 
 # Featureset TODO: 
 ­* Log in with Google
 ­* Log in with Facebook
 * Return to a saved layout
-* Delete a saved layout from the set of saved layouts
-* The layouts should be stored per­-user & should persist though a page refresh.
+* The layouts should be stored per­-user & should persist though a page refresh. - This is the thing I was working on with localStorage, but I couldn't get it fully working. 
 
 # Featureset DONE: 
 * Name a saved layout //this is actually "name a layout before you save it"; you'll be able to load a layout and then save it under a different name after i get "return to a layout" working. 
@@ -18,16 +17,15 @@
 * Remove a rectangle (.remove click event)
 * Change the color of a rectangle (the whole spectrum.js package()
 * Save the current area layout (the position, size, and color of each rectangle in the area)
+* Delete a saved layout from the set of saved layouts (.remove-drawing click event)
 
 ### misc todo/known bugs
-* iterate on $(".rectangle").draggable().resizable(); and make it target ONLY the rect that was just added, not all of them - this could be a memory suck if not
-* some weird behavior - sometimes the rectangles move other rectangles out of the way; also if you delete some, the others will move around. 
-* if the user clicks "save" more than once, it'll save duplicates of the layouts. 
-* iterate on the spectrum input - it's weird until you click on it. 
+* I need to iterate on $(".rectangle").draggable().resizable(). As far as I understand, right now it's targeting ALL .rectangle elements, not just the one that's just been added; this could be cause speed issues. 
+* The positioning of the rectangles [either absolute or relative] causes some weird behavior either way. If they're position: relative, sometimes the rectangles move other rectangles out of the way as you drag them; also if the user deletes some, the others will move around. If they're position: absolute, the user can add several in a row without moving them and not really see how many they added because they'd all be layered on top of one another at top:0/left: 0. 
+* If the user clicks "save" more than once, the app can save duplicates of the layouts. Also, if the user clicks "Save" without any rectangles, it saves a blank element. We should impelement a check. 
+* It's impossible to control the z-index of the rectangles right now - this might be a future improvement. 
 * actual styling, including responsiveness. 
-* QA/mobile testing if there's time
-* z-index issues - not sure i can do anythng about that
-* related to z-index: if you add several rectangles in a row without moving them, you won't see them all because they'll be layered on top of one another at top: 0/left:0.
+* Mobile testing if there's time
 
 
 
