@@ -2,8 +2,16 @@ $(document).ready(function(){
 
   // a reusable rectangle class to append
   // var count = 1 - for iterating
-  var array = sessionStorage.getItem('clicked');
 
+
+   
+  if(localStorage && localStorage.getItem("drawings")){
+    console.log(JSON.parse(localStorage.getItem("drawings")));
+    // add drawings to list.
+  } else {
+    alert("drawings do not exist");
+    // localStorage.setItem("drawings", JSON.stringify([])); 
+  };
 
   var rect = "<div class=\"rectangle\">"
     + "<div class=\"remove\">X</div>"
@@ -38,7 +46,7 @@ $(document).ready(function(){
 
   var drawings = []; //set the drawings array
   var drawingcount = 0; //set the drawings count - i'm not sure if i'm going to use this
-  localStorage.setItem("drawings", JSON.stringify([])); 
+  
 
   $(".save").click(function(){
     drawingcount++;
@@ -52,8 +60,9 @@ $(document).ready(function(){
   });
 
   
+
   
- 
+
 
 
 

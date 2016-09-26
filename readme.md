@@ -26,6 +26,10 @@
 * iterate on the spectrum input - it's weird until you click on it. 
 * actual styling, including responsiveness. 
 * QA/mobile testing if there's time
+* z-index issues - not sure i can do anythng about that
+* related to z-index: if you add several rectangles in a row without moving them, you won't see them all because they'll be layered on top of one another at top: 0/left:0.
+
+
 
 
 ### Done
@@ -36,7 +40,9 @@
 * http://jsfiddle.net/bgrins/ctkY3/ - a fiddle showing me how to use the colorpicker.
 * http://www.lugolabs.com/articles/71-how-to-use-a-color-picker-in-javascript more colorpicker resources
 * https://bgrins.github.io/spectrum/#events-change actual Spectrum documentation.
-
+* https://www.smashingmagazine.com/2010/10/local-storage-and-how-to-use-it/ - localstorage info
+* http://stackoverflow.com/questions/29986657/global-variable-usage-on-page-reload more localstorage info
+* http://stackoverflow.com/questions/5410820/how-can-i-show-all-the-localstorage-saved-variables wtf is in localstorage right now anyway - this is really useful
 
 
 
@@ -52,4 +58,12 @@
 
 
 
+* if(localStorage && localStorage.getItem('favoriteflavor')){
+      alert("favorite flavor exists");
+    } else {
+      alert("nope");
+    };
+      localStorage.setItem('favoriteflavor','vanilla');
 
+
+The first time I loaded the page with the above in app.js, it alerted "nope" because it hadn't been set yet. then it alerted "favorite flavor exists" because it was set after the alert. when i commented out the setItem, it still alerted "favorite flavor exists". cool stuff. 
