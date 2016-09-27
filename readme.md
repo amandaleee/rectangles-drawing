@@ -46,27 +46,3 @@
 * http://stackoverflow.com/questions/5410820/how-can-i-show-all-the-localstorage-saved-variables what is in localstorage right now anyway - this is really useful
 
 * http://api.jquery.com/on/ - for delegated events. The click() method only works on elements that exist on the page when it's attached, so on() gives us a way to target them as they're added later 
-
-
-
-### Resources I looked at but didn't use [when i was going the Canvas direction]
-
-* https://dev.opera.com/articles/html5-canvas-painting/ Canvas tutorial [this isn't as helpful as i hoped]
-*  context.rect(180, 0, 200, 100); is the format for a rect element http://www.html5canvastutorials.com/tutorials/html5-canvas-rectangles/ - that is 
-* http://www.sparknotes.com/math/algebra1/graphingequations/section4.rhtml - checking my math around slope, probably not using this anymore but i might come back to it for a refactor
-* http://jsfiddle.net/HBZBQ/ a fiddle that tracks mouse position, not sure if this works in all browsers.
-* docs on event.which https://api.jquery.com/event.which/ because it's kinda dangerous to just copy stuff from fiddles (as above) and then assume it's going to work.
-* http://stackoverflow.com/questions/14651306/get-mouse-position-within-div offset relative to canvas, not to full document 
-* canvas drawing app tutorial - http://www.williammalone.com/articles/create-html5-canvas-javascript-drawing-app/ - i probably have to redraw() at some point, idk
-
-
-###### Notes on the part I didn't complete - localstorage
-* if(localStorage && localStorage.getItem('favoriteflavor')){
-      alert("favorite flavor exists");
-    } else {
-      alert("nope");
-    };
-      localStorage.setItem('favoriteflavor','vanilla');
-
-
-The first time I loaded the page with the above in app.js, it alerted "nope" because it hadn't been set yet. then it alerted "favorite flavor exists" because it was set after the alert. when i commented out the setItem, it still alerted "favorite flavor exists". cool stuff. 
