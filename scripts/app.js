@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
   //reusable variable for the rectangle
   var rect = '<div class="rectangle">'
     + '<div class="remove">X</div>'
@@ -16,8 +17,8 @@ $(document).ready(function(){
     $(".rectangle").on("click", ".remove", function () {//removes just the one
       $(this).parent(".rectangle").remove(); 
     });
-    $(".colorpicker").spectrum({ //makes the colorpicker function or real
-        preferredFormat: "hex", //hex, not rgb/hsb/string - this might not be necessary
+    $(".colorpicker").spectrum({ //makes the colorpicker function for real
+        preferredFormat: "hex", //hex, not rgb/hsb/string
         change: function(color) { //set new background color when user changes the picker values
           $(this).parent(".rectangle").css("background", color);
         }
@@ -27,36 +28,34 @@ $(document).ready(function(){
     $(".rectangle").remove(); //removes all rectangles
   });
 
-  var drawings = []; //set the drawings array
+  var drawings = []; //set the drawings array for storing saved drawings.
 
   $(".save").click(function(){
-    var drawingname = ($(".drawing-name").val());//save the name, without spaces
+    var drawingname = ($(".drawing-name").val());//save the name 
     var drawingnameClass = drawingname.replace(/\s+/g, ''); //squashes the spaces to use as a class name below
     var drawingval = $(".canvas").html(); //save the drawing
-    //save to local storage here as well. 
     drawings.push({name: drawingname, markup: drawingval, class: drawingnameClass });
-    console.log(drawings);
-    // localStorage.setItem(drawings, JSON.stringify([]));// this isn't right - coming back to this
-    var drawingnameAppend = "<p class=\"" 
+
+    var drawingnameAppend = '<p class="' 
     + drawingnameClass //add the class
-    + " saved-drawing\">" + drawingname 
-    + "<span class=\"remove-drawing\">(remove)</span>" //remove-drawing element for removing it.
-    + "</p>"; //add the name
+    + ' saved-drawing">' + drawingname 
+    + ' <span class="remove-drawing">(remove)</span>' //remove-drawing element for removing it.
+    + '</p>'; //add the name
 
     $(".drawing-list").append(drawingnameAppend); //add paragraph with the drawing name to the div
+  });
 
-    $(".saved-drawing").click(function(){
-      var classSearch = $(this).attr("class").split(' ')[0]; //get all the class attrs from .saved-drawing that te user clicked on, and set classSearch as = to the first. 
-
-       //find that value as "class" from the array of drawings;
-        // use the jquery grep method
-      // 
-      //render that  as innerhtml in the .canvas
+  $('.drawing-list').on('click', '.saved-drawing', function(){
+    var classSearch = $(this).attr("class").split(' ')[0]; //get the class attrs from .saved-drawing that user clicked on; classSearch is the first
+      for (var i=0; i < drawings.length; i++) { //iterate over the array
+        if (drawings[i].class === classSearch) { //if classSearch = the class of this object
+          getSavedDrawing = drawings[i].markup; //get that object's markup...
+          $('.canvas').html(getSavedDrawing);// and then apply it to the .canvas element. 
+        }
+      }
     }); 
     $(".remove-drawing").click(function(){
       $(this).parent(".saved-drawing").remove(); //remove the drawing
-      //need to delete it from localstorage as well. 
     });
-  });
 
 });
