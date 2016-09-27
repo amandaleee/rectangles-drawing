@@ -1,0 +1,72 @@
+.controls {
+  margin-top: $near;
+  width: 60px;
+  overflow: hidden;
+  background-color: $white;
+  border: 1px solid $silver;
+  padding: $near;
+  float: left; 
+  .btn {
+    width: 100%;
+    border-bottom: 1px solid $silver;   
+    display: inline; 
+    float: left; 
+    text-align: center;
+    @extend .border-box;
+    padding: $near;
+    i {
+      font-size: 2rem;
+    }
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+  @media all and (max-width: 768px) {
+    width: 100%; 
+    min-width: 100%;
+    padding: 0rem;
+    .btn {
+      width: 33%;
+      border-bottom: none;
+      border-right: 1px solid $silver;
+      i {
+        font-size: 1.6rem;
+      }
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+  }  
+}
+.name-field {
+  width: 100%; 
+  margin-bottom: $near;
+  font-size: 1.5rem;
+  @media all and (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+.sp-replacer {
+  padding: 0;
+  position: absolute; 
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  margin-right: 0;
+  .sp-dd {
+    display: none; 
+  }
+  @media all and (max-width: 768px) {
+    bottom: -5px;
+    left: -5px;
+    width: 40px;
+    height: 40px; 
+    .sp-preview {
+      width: 40px;
+      height: 40px;
+      margin-right: 0;
+    }
+  }
+}
