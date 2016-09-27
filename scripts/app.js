@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   //reusable variable for the rectangle
   var rect = '<div class="rectangle">'
-    + '<div class="remove">X</div>'
+    + '<div class="remove"><i class="fa fa-times" aria-hidden="true"></i></div>'
     + '<input type="text" class="colorpicker"/>'
     + '</div>';
 

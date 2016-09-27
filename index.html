@@ -7,25 +7,31 @@
     <script src="spectrum.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
-    <link rel="stylesheet" href="styles/app.css" />
+   
     <link rel="stylesheet" href="spectrum.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Cabin:500,600" rel="stylesheet">
+     <link rel="stylesheet" href="styles/app.css" />
   </head>
   <body>
     <div class="drawing-area">
+      <div class="name-field">
+        <label for="drawing-name">Name your drawing: </label>
+        <input type="text" class="drawing-name" value="My Masterpiece" name="drawing-name"/>
+      </div><!--/name-->
       <div class="controls">
         <div class="btn add-rect">
-          Add
+          <i class="fa fa-plus-square" aria-hidden="true"></i>
         </div><!--/add-rect-->
         <div class="btn clear">
-          Clear
+          <i class="fa fa-times" aria-hidden="true"></i>
         </div><!--/clear-->
-        <div class="btn name">
-          <input type="text" class="drawing-name" placeholder="Name your drawing" value="untitled" />
-        </div><!--/name-->
+        
         <div class="btn save">
-          Save
+          <i class="fa fa-floppy-o" aria-hidden="true"></i>
         </div><!--/save-->
       </div><!--/controls-->
+
       <div class="canvas">
       </div><!--/canvas-->
     </div><!--/drawing-area-->

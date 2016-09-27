@@ -1,5 +1,6 @@
 body {
-  background-color: #aaa;
+  background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/double_lined.png) repeat;
+  font-family: 'Cabin', sans-serif;
 }
 .drawing-area {
   width: 90%; 
@@ -11,6 +12,18 @@ body {
   box-sizing: border-box; 
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box; 
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 3px 3px rgba(143,143,143,1);
+  -moz-box-shadow: 0px 0px 3px 3px rgba(143,143,143,1);
+  box-shadow: 0px 0px 3px 3px rgba(143,143,143,1);
+}
+.canvas {
+  width: 80%; 
+  float: right;
+  height: 100%;
+  @media all and (max-width: 768px) {
+    width: 100%;
+  }
 }
 .rectangle {
   background-color: blue; 
@@ -21,12 +34,21 @@ body {
 }
 .remove {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -15px;
+  right: -15px;
   color: #fff;
   background-color: #000;
   padding: 15px;
   z-index: 999;
+  width: 15px;
+  height: 15px; 
+  border-radius: 50%; 
+  -webkit-border-radius: 50%; 
+  -moz-border-radius: 50%; 
+  text-align: center;
+  .fa {
+    margin-top: -11px;
+  }
 }
 .saved {
   width: 90%; 
