@@ -5,17 +5,13 @@ body {
 .drawing-area {
   width: 90%; 
   margin: auto; 
-  background-color: #fff;
+  background-color: $white;
   height: 480px;
   margin-top: 5vh;
   padding: 1rem;
-  box-sizing: border-box; 
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box; 
+  @extend .border-box;
   overflow: hidden;
-  -webkit-box-shadow: 0px 0px 3px 3px rgba(143,143,143,1);
-  -moz-box-shadow: 0px 0px 3px 3px rgba(143,143,143,1);
-  box-shadow: 0px 0px 3px 3px rgba(143,143,143,1);
+  @extend .grey-shadow;
 }
 .canvas {
   width: 80%; 
@@ -26,7 +22,7 @@ body {
   }
 }
 .rectangle {
-  background-color: blue; 
+  background-color: purple; 
   width: 100px;
   height: 100px;
   position: absolute;
@@ -52,7 +48,6 @@ body {
   @media all and (max-width: 768px) {
     width: 15px; 
     height: 15px;
-    
     font-size: 1rem; 
     padding: 12px;
   }
@@ -65,8 +60,8 @@ body {
 .drawing-list {
   width: 100%; 
   p {
-    background-color: #fff; 
-    padding: 1rem;
-    margin-bottom: 1rem;
+    background-color: $white;
+    padding: $near;
+    margin-bottom: $near;
   }
 }
