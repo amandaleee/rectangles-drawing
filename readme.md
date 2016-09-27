@@ -11,7 +11,7 @@
 * Change the color of a rectangle (the whole spectrum.js package()
 * Save the current area layout (the position, size, and color of each rectangle in the area)
 * Delete a saved layout from the set of saved layouts (.remove-drawing click event)
-* Return to a saved layout [click on the layout's name in the list below the canvas]
+* Return to a saved layout [click on the layout's name in the list below the canvas].
 
 # Featureset that I couldn't complete: 
 ­* Log in with Google
@@ -26,7 +26,7 @@
 * It's impossible for the user to control the z-index of the rectangles right now - this would be something I'd improve on in a future iteration. 
 * I only saw this a couple times but sometimes if I saved a bunch of layouts consecutively, I saw some of the rectangles have two color pickers. 
 * I would love to come back to the colorpicker and have it live in the menu, rather than attaching it to each rectangle. It doesn't look great like this, and particularly on mobile it's not user-friendly - we essentially have three manipulable elements within each rectangle, which on a mobile screen is pretty crowded. This would require quite a bit more testing, though. 
-
+* I was able to satisfy the requirement of returning to a saved layout, and renaming it [if only by a technicality - "renaming" is actually just saving another object with the same innerHTML but a different name]. However, if you go back to the saved layout, you're no longer able to edit it in the canvas. I don't fully understand the logic of this behavior but I can look into it more. 
 
 
 
