@@ -1,5 +1,6 @@
-### Assumptions/limitations
-* I tested this on Chrome, Firefox and Safari - normally I'd test on IE as well but I don't have a Windows machine or a testing utility [eg Browserstack] right now. 
+* Application URL: http://www.amandalee.me/rectangles/
+
+
 
 # Featureset that I did complete:  
 * Name a saved layout //this is actually "name a layout before you save it"; you'll be able to load a layout and then save it under a different name after i get "return to a layout" working. 
@@ -11,12 +12,15 @@
 * Change the color of a rectangle (the whole spectrum.js package()
 * Save the current area layout (the position, size, and color of each rectangle in the area)
 * Delete a saved layout from the set of saved layouts (.remove-drawing click event)
-* Return to a saved layout [click on the layout's name in the list below the canvas]
+* Return to a saved layout [click on the layout's name in the list below the canvas].
 
 # Featureset that I couldn't complete: 
 ­* Log in with Google
 ­* Log in with Facebook
 * The layouts should be stored per­-user & should persist though a page refresh. - If I'd not been sick, I would have investigated how to use localStorage for this, adding it to localStorage within the save function and deleting it within the remove-drawing function. 
+
+### Assumptions/limitations/testing details
+* I tested this on Chrome, Firefox and Safari - normally I'd test on IE as well but I don't have a Windows machine or a testing utility [eg Browserstack] right now. I also looked at it on my Nexus 6. 
 
 ### Known bugs, miscellaneous todos, and ideas for improvements: 
 * I need to iterate on $(".rectangle").draggable().resizable(). Right now it's targeting ALL .rectangle elements, not just the one that's just been added; this could be causing speed/memory issues. 
@@ -26,12 +30,7 @@
 * It's impossible for the user to control the z-index of the rectangles right now - this would be something I'd improve on in a future iteration. 
 * I only saw this a couple times but sometimes if I saved a bunch of layouts consecutively, I saw some of the rectangles have two color pickers. 
 * I would love to come back to the colorpicker and have it live in the menu, rather than attaching it to each rectangle. It doesn't look great like this, and particularly on mobile it's not user-friendly - we essentially have three manipulable elements within each rectangle, which on a mobile screen is pretty crowded. This would require quite a bit more testing, though. 
-
-
-
-
-
-### Done
+* I was able to satisfy the requirement of returning to a saved layout, and renaming it [if only by a technicality - "renaming" is actually just saving another object with the same innerHTML but a different name]. However, if you go back to the saved layout, you're no longer able to edit it in the canvas. I don't fully understand the logic of this behavior but I can look into it more. 
 
 
 ### Resources I used
@@ -61,7 +60,7 @@
 * canvas drawing app tutorial - http://www.williammalone.com/articles/create-html5-canvas-javascript-drawing-app/ - i probably have to redraw() at some point, idk
 
 
-
+###### Notes on the part I didn't complete - localstorage
 * if(localStorage && localStorage.getItem('favoriteflavor')){
       alert("favorite flavor exists");
     } else {
