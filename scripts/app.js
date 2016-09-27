@@ -36,11 +36,11 @@ $(document).ready(function(){
     var drawingval = $(".canvas").html(); //save the drawing
     drawings.push({name: drawingname, markup: drawingval, class: drawingnameClass });
 
-    var drawingnameAppend = '<p class="' 
+    var drawingnameAppend = '<div class="' 
     + drawingnameClass //add the class
-    + ' saved-drawing">' + drawingname 
-    + ' <span class="remove-drawing">(remove)</span>' //remove-drawing element for removing it.
-    + '</p>'; //add the name
+    + ' saved-drawing"><div class="drawing-name">' + drawingname 
+    + ' </div><div class="remove-drawing">(remove)</div>' //remove-drawing element for removing it.
+    + '</div>'; //add the name
 
     $(".drawing-list").append(drawingnameAppend); //add paragraph with the drawing name to the div
   });

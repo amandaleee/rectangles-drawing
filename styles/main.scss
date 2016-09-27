@@ -11,7 +11,6 @@ body {
   padding: 1rem;
   @extend .border-box;
   overflow: hidden;
-  @extend .grey-shadow;
 }
 .canvas {
   width: 80%; 
@@ -30,21 +29,14 @@ body {
 }
 .remove {
   position: absolute;
-  top: -7px;
-  right: -7px;
-  color: #fff;
-  background-color: #000;
+  top: -22px;
+  right: -17px;
+  color: #000;
   padding: 10px;
   z-index: 999;
-  width: 10px;
-  height: 10px; 
-  border-radius: 50%; 
-  -webkit-border-radius: 50%; 
-  -moz-border-radius: 50%; 
   text-align: center;
-  margin-top: -12px;
   display: table; 
-  font-size: .8rem;
+  font-size: 24px;
   @media all and (max-width: 768px) {
     width: 15px; 
     height: 15px;
@@ -59,9 +51,19 @@ body {
 }
 .drawing-list {
   width: 100%; 
-  p {
+  .saved-drawing {
     background-color: $white;
     padding: $near;
     margin-bottom: $near;
+    overflow: hidden;
+    .drawing-name {
+      width: 75%;
+      float: left; 
+    }
+    .remove-drawing {
+      width: 25%;
+      float: right;
+      text-align: right;
+    }
   }
 }
