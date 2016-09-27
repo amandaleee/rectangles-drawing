@@ -20,11 +20,11 @@
 * Delete a saved layout from the set of saved layouts (.remove-drawing click event)
 
 ### misc todo/known bugs
-* I need to iterate on $(".rectangle").draggable().resizable(). As far as I understand, right now it's targeting ALL .rectangle elements, not just the one that's just been added; this could be cause speed issues. 
+* I need to iterate on $(".rectangle").draggable().resizable(). Right now it's targeting ALL .rectangle elements, not just the one that's just been added; this could be cause speed/memory issues. 
 * The positioning of the rectangles [either absolute or relative] causes some weird behavior either way. If they're position: relative, sometimes the rectangles move other rectangles out of the way as you drag them; also if the user deletes some, the others will move around. If they're position: absolute, the user can add several in a row without moving them and not really see how many they added because they'd all be layered on top of one another at top:0/left: 0. 
-* If the user clicks "save" more than once, the app can save duplicates of the layouts. Also, if the user clicks "Save" without any rectangles, it saves a blank element. We should impelement a check. 
-* It's impossible to control the z-index of the rectangles right now - this might be a future improvement. 
-* actual styling, including responsiveness. 
+* If the user clicks "save" more than once, the app can save duplicates of the layouts. Also, if the user clicks "Save" without any rectangles, it saves an object with blank innerhtml. We should impelement a check for this. 
+* It's impossible to control the z-index of the rectangles right now - this will need to be a future improvement. 
+* Styling improvements - it's fluid now, but not pretty at all sizes. 
 * Mobile testing if there's time
 
 
@@ -41,6 +41,7 @@
 * https://www.smashingmagazine.com/2010/10/local-storage-and-how-to-use-it/ - localstorage info
 * http://stackoverflow.com/questions/29986657/global-variable-usage-on-page-reload more localstorage info
 * http://stackoverflow.com/questions/5410820/how-can-i-show-all-the-localstorage-saved-variables wtf is in localstorage right now anyway - this is really useful
+* find an object by property http://stackoverflow.com/questions/7364150/find-object-by-id-in-an-array-of-javascript-objects [i've never done this before outside of class exercises]
 
 
 
