@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   //reusable variable for the rectangle
   var rect = '<div class="rectangle">'
-    + '<div class="remove"><i class="fa fa-times" aria-hidden="true"></i></div>'
+    + '<i class="fa fa-times remove" aria-hidden="true"></i>'
     + '<input type="text" class="colorpicker"/>'
     + '</div>';
 
@@ -54,7 +54,7 @@ $(document).ready(function(){
         }
       }
     }); 
-    $(".remove-drawing").click(function(){
+    $(".drawing-list").on('click', '.remove-drawing', function(){
       $(this).parent(".saved-drawing").remove(); //remove the drawing
     });
 

@@ -43,8 +43,12 @@
 .name-field {
   width: 100%; 
   margin-bottom: 1rem;
+  font-size: 1.5rem;
   input {
     color: #999;
+  }
+  @media all and (max-width: 768px) {
+    font-size: 1rem;
   }
 }
 

@@ -25,9 +25,8 @@
 * If the user clicks "save" more than once, the app can save duplicates of the layouts. Also, if the user clicks "Save" without any rectangles, it saves an object with blank innerhtml. This could cause an issue with retrieving the correct drawing. We should impelement a check for this. 
 * It's impossible for the user to control the z-index of the rectangles right now - this would be something I'd improve on in a future iteration. 
 * I only saw this a couple times but sometimes if I saved a bunch of layouts consecutively, I saw some of the rectangles have two color pickers. 
-* I would love to come back to the colorpicker and have it live in the menu, rather than attaching it to each rectangle. It doesn't look great like this. 
-* Styling improvements - it's fluid now, but not pretty at all sizes. 
-* Mobile testing if there's time
+* I would love to come back to the colorpicker and have it live in the menu, rather than attaching it to each rectangle. It doesn't look great like this, and particularly on mobile it's not user-friendly - we essentially have three manipulable elements within each rectangle, which on a mobile screen is pretty crowded. This would require quite a bit more testing, though. 
+
 
 
 
